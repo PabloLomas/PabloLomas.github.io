@@ -89,10 +89,18 @@
 
   /* ---- Contact ---- */
   .contact p{margin-bottom:20px;color:#333}
-  .email{font-family:"JetBrains Mono",monospace;font-size:.95rem}
-  .socials{display:flex;flex-wrap:wrap;gap:18px;font-family:"JetBrains Mono",monospace;font-size:.72rem;list-style:none}
-  .socials a{color:var(--muted);border:none}
-  .socials a:hover{color:var(--accent)}
+  .email{font-family:"JetBrains Mono",monospace;font-size:.95rem;display:flex;align-items:center;gap:10px;margin-bottom:12px}
+  .email svg{width:18px;height:18px;fill:none;stroke:var(--accent);stroke-width:1.8;flex-shrink:0}
+  .email a.wa{display:inline-flex;align-items:center;gap:6px;margin-left:6px;border:none;
+    background:#25D366;color:#fff;font-size:.78rem;padding:4px 11px 4px 9px;border-radius:30px}
+  .email a.wa:hover{background:#1da851}
+  .email a.wa svg{width:15px;height:15px;fill:#fff;stroke:none}
+  .socials{display:flex;flex-wrap:wrap;gap:14px;list-style:none;margin-top:10px}
+  .socials a{display:inline-flex;align-items:center;gap:9px;color:var(--fg);border:none;
+    font-family:"JetBrains Mono",monospace;font-size:.9rem;
+    padding:9px 16px 9px 13px;border:1px solid var(--line);border-radius:30px;transition:.15s}
+  .socials a:hover{color:var(--accent);border-color:var(--accent);background:rgba(58,90,64,.05)}
+  .socials svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
 
   footer{max-width:var(--max);margin:0 auto;padding:30px 0 50px;font-family:"JetBrains Mono",monospace;font-size:.66rem;color:var(--muted)}
 
@@ -140,13 +148,13 @@
       <div class="meta">2025 · Scientific Data, 12(1), 7</div>
       <div class="title">Economic preferences and cognitive abilities among teenagers in Spain</div>
       <div class="authors">Vasco, M., Alfonso, A., Arenas, A., Cabrales, A., <b>Lomas, P.</b>, et al.</div>
-      <div class="links"><a href="https://doi.org/10.1038/s41597-024-04308-7">DOI</a></div>
+      <div class="links"><a href="https://www.nature.com/articles/s41597-024-04298-6">Link</a></div>
     </div>
     <div class="pub">
       <div class="meta">2023 · Journal of Behavioral and Experimental Economics, 106, 102048</div>
       <div class="title">The adventure of running experiments with teenagers</div>
       <div class="authors">Alfonso, A., Bra&ntilde;as-Garza, P., Jorrat, D., <b>Lomas, P.</b>, Priss&eacute;, B., Vasco, M., &amp; V&aacute;zquez-De Francisco, M. J.</div>
-      <div class="links"><a href="https://doi.org/10.1016/j.socec.2023.102048">DOI</a></div>
+      <div class="links"><a href="https://www.sciencedirect.com/science/article/abs/pii/S2214804323000745">Link</a></div>
     </div>
 
     <p class="comment">// work in progress</p>
@@ -154,16 +162,19 @@
       <div class="meta">2026 · Mimeo</div>
       <div class="title">Asymmetric development of strategic coordination across the life cycle</div>
       <div class="authors">Bra&ntilde;as-Garza, P., Jorrat, D., &amp; <b>Lomas, P.</b></div>
+      <div class="links"><a href="assets/papers/asymmetric-development-strategic-coordination.pdf">Article</a><a href="assets/papers/asymmetric-development-strategic-coordination-SM.pdf">SM</a></div>
     </div>
     <div class="pub">
       <div class="meta">2026 · Working paper</div>
       <div class="title">Coordination with and without incentives</div>
       <div class="authors">Bra&ntilde;as-Garza, P., Jorrat, D., &amp; <b>Lomas, P.</b></div>
+      <div class="links"><a href="assets/papers/coordination-with-and-without-incentives.pdf">Article</a><a href="assets/papers/coordination-with-and-without-incentives-SM.pdf">SM</a></div>
     </div>
     <div class="pub">
       <div class="meta">2026 · Mimeo</div>
       <div class="title">The weight of cognitive abilities: Testing and re-testing strategic games in adolescents</div>
       <div class="authors"><b>Lomas, P.</b></div>
+      <div class="links"><a href="assets/papers/weight-of-cognitive-abilities.pdf">Article</a></div>
     </div>
 
     <p class="comment">// policy papers</p>
@@ -171,7 +182,7 @@
       <div class="meta">2025 · Save the Children</div>
       <div class="title">Cuentas que no salen: Radiograf&iacute;a de la pobreza laboral en los hogares de Espa&ntilde;a</div>
       <div class="authors">Gorj&oacute;n, L., del Moral, C., Romero, G., &amp; <b>Lomas, P.</b></div>
-      <div class="links"><a href="https://www.savethechildren.es/sites/default/files/2025-05/Cuentas_que_no_salen.pdf">PDF</a></div>
+      <div class="links"><a href="https://www.savethechildren.es/actualidad/cuentas-que-no-salen">Link</a></div>
     </div>
     <div class="pub">
       <div class="meta">2025 · Save the Children</div>
@@ -179,9 +190,12 @@
       <div class="authors">Tormen, E., <b>Lomas, P.</b>, et al.</div>
       <div class="links"><a href="https://resourcecentre.savethechildren.net/document/child-poverty-the-cost-europe-cannot-afford-2025">Link</a></div>
     </div>
-
-    <p class="comment">// full list</p>
-    <p><a href="https://orcid.org/0000-0002-0308-7928">ORCID &rarr;</a></p>
+    <div class="pub">
+      <div class="meta">2023 &ndash; 2025 · Spanish Ministry of Social Inclusion &amp; Migration &mdash; Policy Lab</div>
+      <div class="title">Public policy analysis reports on the review and functioning of the Minimum Income Scheme (Ingreso M&iacute;nimo Vital, IMV) and the reduction of economic and social vulnerability in Spain</div>
+      <div class="authors">Contributor</div>
+      <div class="links"><a href="https://www.inclusion.gob.es/web/policy-lab">Link</a></div>
+    </div>
   </section>
 
   <!-- ===== CV ===== -->
@@ -193,41 +207,47 @@
     <p class="comment">// experience</p>
     <div class="cv-item">
       <div class="year">2026</div>
-      <div class="what"><b>Field Coordinator</b><span>ENBE project, Loyola Behavioral Lab (freelance) &mdash; field experiments across Andalusian universities</span></div>
+      <div class="what"><b>Field Coordinator</b><span>ENBE project, Loyola Behavioral Lab (freelance). Incentivized field experiments across Andalusian universities on strategy, emotions and cognitive abilities. Programmed in oTree.</span></div>
     </div>
     <div class="cv-item">
       <div class="year">2025</div>
-      <div class="what"><b>National Advocacy Specialist, Poverty &amp; Inequality</b><span>Save the Children &mdash; Madrid, Spain (until December 2025)</span></div>
+      <div class="what"><b>National Advocacy Specialist, Poverty &amp; Inequality</b><span>Save the Children (Madrid, Spain). Proposed national policies to fight child poverty in Spain.</span></div>
     </div>
     <div class="cv-item">
       <div class="year">2023 &ndash; 2025</div>
-      <div class="what"><b>Public Policy Analyst</b><span>Tragsa Group, with the Spanish Ministry of Social Inclusion &amp; Migration and J-PAL &mdash; Madrid, Spain</span></div>
+      <div class="what"><b>Public Policy Analyst</b><span>Tragsa Group, with the Spanish Ministry of Social Inclusion &amp; Migration and J-PAL (Madrid, Spain). Analyzed policies and interventions to fight economic vulnerability and the functioning of the Minimum Income Scheme (Ingreso M&iacute;nimo Vital, IMV).</span></div>
     </div>
     <div class="cv-item">
       <div class="year">2023</div>
-      <div class="what"><b>Research Assistant</b><span>Loyola Andaluc&iacute;a University, Economics Department</span></div>
+      <div class="what"><b>Research Assistant</b><span>Loyola Andaluc&iacute;a University, Economics Department (C&oacute;rdoba, Spain)</span></div>
     </div>
     <div class="cv-item">
       <div class="year">2021 &ndash; 2023</div>
-      <div class="what"><b>Field Coordinator</b><span>Fundaci&oacute;n ETEA &ndash; Development Institute (LAU); Prof. Brocas &amp; Carrillo (USC); Fundaci&oacute;n Fe y Alegr&iacute;a, El Salvador</span></div>
+      <div class="what"><b>Field Coordinator</b><span>Fundaci&oacute;n ETEA &ndash; Development Institute (LAU); Prof. Brocas &amp; Carrillo (USC); Fundaci&oacute;n Fe y Alegr&iacute;a (El Salvador). Incentivized and non-incentivized field experiments in schools on cognitive abilities, networks and economic behavior, with subjects aged 6 to 18. Programmed in oTree and Sand Kampal.</span></div>
     </div>
 
     <p class="comment">// education</p>
     <div class="cv-item">
       <div class="year">2022 &ndash; 2026</div>
-      <div class="what"><b>PhD in Data Science (Behavioral Economics)</b><span>Loyola Andaluc&iacute;a University, C&oacute;rdoba, Spain</span></div>
+      <div class="what"><b>PhD in Data Science (Behavioral Economics)</b><span>Loyola Andaluc&iacute;a University (C&oacute;rdoba, Spain)</span></div>
     </div>
     <div class="cv-item">
       <div class="year">2021 &ndash; 2022</div>
-      <div class="what"><b>MRes in Quantitative Social Sciences</b><span>Loyola Andaluc&iacute;a University, C&oacute;rdoba, Spain</span></div>
+      <div class="what"><b>MRes in Quantitative Social Sciences</b><span>Loyola Andaluc&iacute;a University (C&oacute;rdoba, Spain)</span></div>
     </div>
     <div class="cv-item">
       <div class="year">2018 &ndash; 2019</div>
-      <div class="what"><b>BSc in Business Economics</b><span>University of Guelph, Ontario, Canada</span></div>
+      <div class="what"><b>BSc in Business Economics</b><span>University of Guelph (Ontario, Canada)</span></div>
     </div>
     <div class="cv-item">
       <div class="year">2015 &ndash; 2020</div>
-      <div class="what"><b>BSc in Economics &amp; BSc in Business Economics</b><span>M&aacute;laga University, M&aacute;laga, Spain</span></div>
+      <div class="what"><b>BSc in Economics &amp; BSc in Business Economics</b><span>M&aacute;laga University (M&aacute;laga, Spain)</span></div>
+    </div>
+
+    <p class="comment">// research stay</p>
+    <div class="cv-item">
+      <div class="year">2026</div>
+      <div class="what"><b>Visiting Researcher</b><span>Sapienza University of Rome (Rome, Italy) &mdash; January&ndash;May 2026</span></div>
     </div>
 
     <p class="comment">// funding</p>
@@ -240,14 +260,36 @@
       <div class="what"><b>Decisions, Education, Networks and Teenagers (PID2021-126892NB-I00)</b><span>Spanish Ministry of Science and Innovation</span></div>
     </div>
 
+    <p class="comment">// courses &amp; workshops</p>
+    <div class="cv-item">
+      <div class="year">2026</div>
+      <div class="what"><b>Spring School &amp; Workshop on Behavioral Economics, Finance, and Management in the Age of AI &amp; Sustainability</b><span>CIMEO (Centre for Investigation and Modeling of Experimental Observations), Sapienza University of Rome (Soleto, Italy) &mdash; May 2026. Attendee.</span></div>
+    </div>
+    <div class="cv-item">
+      <div class="year">2023</div>
+      <div class="what"><b>Summer School &amp; Workshop on Experimetrics &amp; Behavioral Economics</b><span>Sapienza University of Rome (Soleto, Italy) &mdash; July 2023. Attendee.</span></div>
+    </div>
+    <div class="cv-item">
+      <div class="year">2023</div>
+      <div class="what"><b>PhD Course: Behavioral Economics &mdash; Behind the Scenes</b><span>University of Copenhagen (Copenhagen, Denmark) &mdash; June 2023. Attendee.</span></div>
+    </div>
+    <div class="cv-item">
+      <div class="year">2022</div>
+      <div class="what"><b>Conference on Human Capital Investments (Behavioural)</b><span>Loyola Andaluc&iacute;a University (C&oacute;rdoba, Spain) &mdash; June 2022. Organizer.</span></div>
+    </div>
+
     <p class="comment">// teaching &amp; skills</p>
     <div class="cv-item">
       <div class="year">2022 &ndash; 2023</div>
-      <div class="what"><b>Macroeconomics IV</b><span>Loyola Andaluc&iacute;a University</span></div>
+      <div class="what"><b>Macroeconomics IV</b><span>Loyola Andaluc&iacute;a University (Seville, Spain)</span></div>
     </div>
     <div class="cv-item">
       <div class="year">tools</div>
-      <div class="what"><b>R, Stata, Python, LaTeX</b><span>Also PowerBI, SPSS, Eviews, KNIME, Weka. Spanish (native), English (advanced), French (basic).</span></div>
+      <div class="what"><b>RStudio, Stata, Qualtrics, oTree, Python, LaTeX</b><span>Also PowerBI, SPSS, Eviews, KNIME, Weka.</span></div>
+    </div>
+    <div class="cv-item">
+      <div class="year">languages</div>
+      <div class="what"><b>Spanish, English, French</b><span>Spanish (native), English (advanced), French (basic).</span></div>
     </div>
 
     <a class="download" href="assets/Pablo-Lomas-CV.pdf">Download full CV (PDF) &rarr;</a>
@@ -258,11 +300,16 @@
     <div class="label">// say hello</div>
     <h2>Get in touch</h2>
     <p>If you have interesting questions, ideas for collaboration, or conversations worth having, write to me at:</p>
-    <p class="email"><a href="mailto:pablodelomas1997@gmail.com">pablodelomas1997@gmail.com</a></p>
+    <p class="email"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6 9 6.5L21 6"/></svg><a href="mailto:pablodelomas1997@gmail.com">pablodelomas1997@gmail.com</a></p>
+    <p class="email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3h3l1.5 4.5-2 1.5a12 12 0 0 0 6 6l1.5-2 4.5 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5a2 2 0 0 1 2-2z"/></svg><a href="tel:+34616850858">(+34) 616 85 08 58</a><a class="wa" href="https://wa.me/34616850858" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 1.67c2.2 0 4.27.86 5.83 2.42a8.2 8.2 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24zm-4.7 4.42c-.16 0-.41.06-.63.3-.22.24-.83.81-.83 1.98s.85 2.3.97 2.46c.12.16 1.67 2.55 4.05 3.58.57.24 1.01.39 1.36.5.57.18 1.09.16 1.5.1.46-.07 1.41-.58 1.61-1.13.2-.55.2-1.03.14-1.13-.06-.1-.22-.16-.46-.28-.24-.12-1.41-.7-1.63-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.92-1.19-.71-.63-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46z"/></svg>WhatsApp</a></p>
+    <p class="email">ORCID: <a href="https://orcid.org/0000-0002-0308-7928">0000-0002-0308-7928</a></p>
     <ul class="socials">
-      <li><a href="https://orcid.org/0000-0002-0308-7928">orcid</a></li>
-      <li><a href="https://www.linkedin.com/in/Pablo-Montero-Lomas">linkedin</a></li>
-      <li><a href="https://x.com/Pablo_De_Lomas">x</a></li>
+      <li><a href="https://www.linkedin.com/in/pablo-montero-lomas-041151180/" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        LinkedIn</a></li>
+      <li><a href="https://x.com/Pablo_De_Lomas" aria-label="X">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.41l-5.8-7.58-6.64 7.58H.46l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93zm-1.29 19.5h2.04L6.49 3.24H4.3l13.31 17.41z"/></svg>
+        X</a></li>
     </ul>
   </section>
 
