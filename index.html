@@ -56,8 +56,9 @@
   .comment{font-family:"JetBrains Mono",monospace;font-size:.7rem;color:var(--muted);margin:30px 0 10px}
 
   /* ---- Hero ---- */
-  .greet{font-family:"JetBrains Mono",monospace;font-size:.9rem;color:var(--accent);margin-bottom:24px}
-  .cursor{display:inline-block;width:8px;background:var(--accent);animation:blink 1s steps(1) infinite}
+  .greet{font-family:"JetBrains Mono",monospace;font-size:.9rem;color:var(--accent);margin-bottom:24px;display:flex;align-items:center;min-height:1.4em}
+  .greet #greetWord{display:inline-block;min-width:7.5ch;transition:opacity .35s ease}
+  .cursor{display:inline-block;width:8px;height:1.1em;background:var(--accent);animation:blink 1s steps(1) infinite}
   @keyframes blink{50%{opacity:0}}
   h1{font-size:2rem;font-weight:400;line-height:1.25;letter-spacing:-.01em;margin-bottom:28px;max-width:18ch}
   h1 em{font-style:italic;color:var(--accent)}
@@ -71,13 +72,12 @@
   .sub{color:var(--muted);margin-bottom:24px}
 
   /* ---- Publications ---- */
-  .pub{padding:18px 0;border-top:1px solid var(--line)}
+  .pub{padding:15px 0;border-top:1px solid var(--line)}
   .pub:first-of-type{border-top:none}
-  .pub .meta{font-family:"JetBrains Mono",monospace;font-size:.68rem;color:var(--accent-soft);margin-bottom:6px}
-  .pub .title{font-size:1.08rem;line-height:1.4}
-  .pub .authors{color:var(--muted);font-size:.95rem}
-  .pub .authors b{color:var(--fg);font-weight:500}
-  .pub .links{font-family:"JetBrains Mono",monospace;font-size:.66rem;margin-top:6px;display:flex;gap:14px}
+  .pub .ref{font-size:1rem;line-height:1.55;color:#2a2a2a;padding-left:1.8em;text-indent:-1.8em}
+  .pub .ref i{font-style:italic}
+  .pub .ref b{font-weight:600;color:var(--fg)}
+  .pub .links{font-family:"JetBrains Mono",monospace;font-size:.66rem;margin-top:6px;display:flex;gap:14px;padding-left:1.8em}
 
   /* ---- CV ---- */
   .cv-item{display:flex;gap:20px;padding:14px 0;border-top:1px solid var(--line)}
@@ -129,11 +129,11 @@
 
   <!-- ===== HERO / ABOUT ===== -->
   <section id="about">
-    <div class="greet">Hello<span class="cursor" id="cursor">&nbsp;</span></div>
+    <div class="greet"><span id="greetWord">Hello</span><span class="cursor" id="cursor">&nbsp;</span></div>
     <h1>I&nbsp;study how <em>strategic reasoning</em> and cognitive abilities develop across the life&nbsp;cycle.</h1>
     <div class="intro">
       <img src="assets/portrait.png" alt="Pablo Lomas" onerror="this.style.display='none'">
-      <p>I&rsquo;m a <b>PhD candidate in Data Science (Behavioral Economics)</b> at Loyola Andaluc&iacute;a University. I use lab-in-the-field experiments to understand how strategic coordination, decision-making and cognitive abilities evolve &mdash; especially in children and teenagers. My interest in improving welfare has led me to several professional experiences as a poverty specialist and public policy analyst. I have also worked extensively as a <b>field coordinator</b>, and I&rsquo;m open to freelance opportunities coordinating, running and organizing field research and experiments. You&rsquo;ll find my publications and CV below, or you can <a href="#contact">get in touch</a>.</p>
+      <p>I&rsquo;m a <b>PhD Candidate</b> in Data Science (<b>Behavioral Economics</b>) at Loyola Andaluc&iacute;a University. I use <b>lab-in-the-field</b> experiments to understand how strategic coordination, decision-making and cognitive abilities evolve, especially in children and teenagers. My interest in improving welfare has led me to several professional experiences as a poverty specialist and <b>public policy analyst</b>. I have also worked extensively as a <b>field coordinator</b>, and I&rsquo;m open to freelance opportunities coordinating, running and organizing field research and experiments. You&rsquo;ll find my publications and <b>CV</b> below, or you can <a href="#contact"><b>get in touch</b></a>.</p>
     </div>
   </section>
 
@@ -145,55 +145,39 @@
 
     <p class="comment">// peer-reviewed</p>
     <div class="pub">
-      <div class="meta">2025 · Scientific Data, 12(1), 7</div>
-      <div class="title">Economic preferences and cognitive abilities among teenagers in Spain</div>
-      <div class="authors">Vasco, M., Alfonso, A., Arenas, A., Cabrales, A., <b>Lomas, P.</b>, et al.</div>
+      <div class="ref">Vasco, M., Alfonso, A., Arenas, A., Cabrales, A., <b>Lomas, P.</b>, et al. (2025). Economic preferences and cognitive abilities among teenagers in Spain. <i>Scientific Data, 12</i>(1), 7.</div>
       <div class="links"><a href="https://www.nature.com/articles/s41597-024-04298-6">Link</a></div>
     </div>
     <div class="pub">
-      <div class="meta">2023 · Journal of Behavioral and Experimental Economics, 106, 102048</div>
-      <div class="title">The adventure of running experiments with teenagers</div>
-      <div class="authors">Alfonso, A., Bra&ntilde;as-Garza, P., Jorrat, D., <b>Lomas, P.</b>, Priss&eacute;, B., Vasco, M., &amp; V&aacute;zquez-De Francisco, M. J.</div>
+      <div class="ref">Alfonso, A., Bra&ntilde;as-Garza, P., Jorrat, D., <b>Lomas, P.</b>, Priss&eacute;, B., Vasco, M., &amp; V&aacute;zquez-De Francisco, M. J. (2023). The adventure of running experiments with teenagers. <i>Journal of Behavioral and Experimental Economics, 106</i>, 102048.</div>
       <div class="links"><a href="https://www.sciencedirect.com/science/article/abs/pii/S2214804323000745">Link</a></div>
     </div>
 
     <p class="comment">// work in progress</p>
     <div class="pub">
-      <div class="meta">2026 · Mimeo</div>
-      <div class="title">Asymmetric development of strategic coordination across the life cycle</div>
-      <div class="authors">Bra&ntilde;as-Garza, P., Jorrat, D., &amp; <b>Lomas, P.</b></div>
+      <div class="ref">Bra&ntilde;as-Garza, P., Jorrat, D., &amp; <b>Lomas, P.</b> (2026). <i>Asymmetric development of strategic coordination across the life cycle</i> [Working paper].</div>
       <div class="links"><a href="assets/papers/asymmetric-development-strategic-coordination.pdf">Article</a><a href="assets/papers/asymmetric-development-strategic-coordination-SM.pdf">SM</a></div>
     </div>
     <div class="pub">
-      <div class="meta">2026 · Working paper</div>
-      <div class="title">Coordination with and without incentives</div>
-      <div class="authors">Bra&ntilde;as-Garza, P., Jorrat, D., &amp; <b>Lomas, P.</b></div>
+      <div class="ref">Bra&ntilde;as-Garza, P., Jorrat, D., &amp; <b>Lomas, P.</b> (2026). <i>Coordination with and without incentives</i> [Working paper].</div>
       <div class="links"><a href="assets/papers/coordination-with-and-without-incentives.pdf">Article</a><a href="assets/papers/coordination-with-and-without-incentives-SM.pdf">SM</a></div>
     </div>
     <div class="pub">
-      <div class="meta">2026 · Mimeo</div>
-      <div class="title">The weight of cognitive abilities: Testing and re-testing strategic games in adolescents</div>
-      <div class="authors"><b>Lomas, P.</b></div>
+      <div class="ref"><b>Lomas, P.</b> (2026). <i>The weight of cognitive abilities: Testing and re-testing strategic games in adolescents</i> [Manuscript in preparation].</div>
       <div class="links"><a href="assets/papers/weight-of-cognitive-abilities.pdf">Article</a></div>
     </div>
 
     <p class="comment">// policy papers</p>
     <div class="pub">
-      <div class="meta">2025 · Save the Children</div>
-      <div class="title">Cuentas que no salen: Radiograf&iacute;a de la pobreza laboral en los hogares de Espa&ntilde;a</div>
-      <div class="authors">Gorj&oacute;n, L., del Moral, C., Romero, G., &amp; <b>Lomas, P.</b></div>
+      <div class="ref">Gorj&oacute;n, L., del Moral, C., Romero, G., &amp; <b>Lomas, P.</b> (2025). <i>Cuentas que no salen: Radiograf&iacute;a de la pobreza laboral en los hogares de Espa&ntilde;a</i>. Save the Children.</div>
       <div class="links"><a href="https://www.savethechildren.es/actualidad/cuentas-que-no-salen">Link</a></div>
     </div>
     <div class="pub">
-      <div class="meta">2025 · Save the Children</div>
-      <div class="title">Child poverty: The cost Europe cannot afford</div>
-      <div class="authors">Tormen, E., <b>Lomas, P.</b>, et al.</div>
+      <div class="ref">Tormen, E., <b>Lomas, P.</b>, et al. (2025). <i>Child poverty: The cost Europe cannot afford</i>. Save the Children.</div>
       <div class="links"><a href="https://resourcecentre.savethechildren.net/document/child-poverty-the-cost-europe-cannot-afford-2025">Link</a></div>
     </div>
     <div class="pub">
-      <div class="meta">2023 &ndash; 2025 · Spanish Ministry of Social Inclusion &amp; Migration &mdash; Policy Lab</div>
-      <div class="title">Public policy analysis reports on the review and functioning of the Minimum Income Scheme (Ingreso M&iacute;nimo Vital, IMV) and the reduction of economic and social vulnerability in Spain</div>
-      <div class="authors">Contributor</div>
+      <div class="ref"><b>Lomas, P.</b>, et al. (2023&ndash;2025). <i>Public policy analysis reports on the review and functioning of the Minimum Income Scheme (Ingreso M&iacute;nimo Vital, IMV) and the reduction of economic and social vulnerability in Spain</i>. Spanish Ministry of Social Inclusion &amp; Migration &mdash; Policy Lab.</div>
       <div class="links"><a href="https://www.inclusion.gob.es/web/policy-lab">Link</a></div>
     </div>
   </section>
@@ -318,36 +302,20 @@
 <footer>// pablo lomas &middot; <span id="year"></span> &middot; EOF</footer>
 
 <script>
-  // typewriter greeting cycle
+  // greeting cross-fade (no layout shift)
   (function(){
-    var greetings=["Hello","Hola","Bonjour","Olá"];
-    var el=document.querySelector('.greet');
-    var cursor=document.getElementById('cursor');
+    var greetings=["Hello","Hola","Bonjour","Olá","Ciao","Hallo","مرحبا","你好","こんにちは"];
+    var word=document.getElementById('greetWord');
+    if(!word)return;
     var i=0;
-    function type(word,cb){
-      var n=0;el.textContent='';
-      var t=setInterval(function(){
-        el.textContent=word.slice(0,++n);
-        el.appendChild(cursor);
-        if(n>=word.length){clearInterval(t);setTimeout(cb,1600);}
-      },90);
-    }
-    function erase(word,cb){
-      var n=word.length;
-      var t=setInterval(function(){
-        el.textContent=word.slice(0,--n);
-        el.appendChild(cursor);
-        if(n<=0){clearInterval(t);cb();}
-      },45);
-    }
-    function loop(){
-      type(greetings[i],function(){
-        erase(greetings[i],function(){
-          i=(i+1)%greetings.length;loop();
-        });
-      });
-    }
-    loop();
+    setInterval(function(){
+      word.style.opacity=0;
+      setTimeout(function(){
+        i=(i+1)%greetings.length;
+        word.textContent=greetings[i];
+        word.style.opacity=1;
+      },350);
+    },2600);
   })();
   document.getElementById('year').textContent=new Date().getFullYear();
 </script>
